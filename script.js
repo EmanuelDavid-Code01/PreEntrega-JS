@@ -168,28 +168,28 @@ alert("Click en aceptar para ver los productos");
 
 let objetos = [
   {
-    id: 2,
+    id: 1,
     nombre: "PlayStation 4",
     categoria: "Electronico",
     precio: 100000,
     stock: 4,
   },
   {
-    id: 5,
+    id: 2,
     nombre: "Nintendo",
     categoria: "Electronico",
     precio: 150000,
     stock: 5,
   },
   {
-    id: 7,
+    id: 3,
     nombre: "Monopoli",
     categoria: "Juego de mesa",
     precio: 5000,
     stock: 8,
   },
   {
-    id: 8,
+    id: 4,
     nombre: "jumanji",
     categoria: "Juego de mesa",
     precio: 9000,
