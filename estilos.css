@@ -1,0 +1,18 @@
+#ContenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Producto {
+    height: 350px;
+    width: 350px;
+}
+
+img {
+    width: 265px;
+    height: 265px;
+}
+
+.pocasUnidades {
+    background-color: brown;
+}

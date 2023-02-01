@@ -164,44 +164,101 @@
 
 //Preentrega 2
 
-alert("Click en aceptar para ver los productos");
+// alert("Click en aceptar para ver los productos");
 
-let objetos = [
+// let objetos = [
+//   {
+//     id: 1,
+//     nombre: "PlayStation 4",
+//     categoria: "Electronico",
+//     precio: 100000,
+//     stock: 4,
+//   },
+//   {
+//     id: 2,
+//     nombre: "Nintendo",
+//     categoria: "Electronico",
+//     precio: 150000,
+//     stock: 5,
+//   },
+//   {
+//     id: 3,
+//     nombre: "Monopoli",
+//     categoria: "Juego de mesa",
+//     precio: 5000,
+//     stock: 8,
+//   },
+//   {
+//     id: 4,
+//     nombre: "jumanji",
+//     categoria: "Juego de mesa",
+//     precio: 9000,
+//     stock: 2,
+//   },
+// ];
+// objetos.sort((a, b) => a.precio - b.precio);
+// console.log(objetos);
+
+// let salida = "";
+// objetos.forEach((objeto) => {
+//   salida = salida + objeto.id + "- " + objeto.nombre + "\n";
+// });
+
+// alert(salida);
+
+//Tercer entrega
+
+let Productos = [
   {
     id: 1,
-    nombre: "PlayStation 4",
-    categoria: "Electronico",
-    precio: 100000,
-    stock: 4,
+    nombre: "Short Deportivo",
+    categoria: "Deportiva",
+    precio: 1500,
+    stock: 20,
+    imgUrl: "./Imagenes/ShortDeportivo.png",
   },
   {
     id: 2,
-    nombre: "Nintendo",
-    categoria: "Electronico",
-    precio: 150000,
-    stock: 5,
+    nombre: "Campera",
+    categoria: "Ropa de invierno",
+    precio: 1800,
+    stock: 12,
+    imgUrl: "./Imagenes/ShortDeportivo.png",
   },
   {
     id: 3,
-    nombre: "Monopoli",
-    categoria: "Juego de mesa",
-    precio: 5000,
-    stock: 8,
-  },
-  {
-    id: 4,
-    nombre: "jumanji",
-    categoria: "Juego de mesa",
-    precio: 9000,
-    stock: 2,
+    nombre: "Musculosa",
+    categoria: "Ropa de verano",
+    precio: 2000,
+    stock: 9,
+    imgUrl: "./Imagenes/ShortDeportivo.png",
   },
 ];
-objetos.sort((a, b) => a.precio - b.precio);
-console.log(objetos);
 
-let salida = "";
-objetos.forEach((objeto) => {
-  salida = salida + objeto.id + "- " + objeto.nombre + "\n";
+let ContenedorProductos = document.getElementById("ContenedorProductos"); //Porque es uno solo
+
+//renderizar productos
+Productos.forEach((Producto) => {
+  let cardProducto = document.createElement("div");
+
+  cardProducto.classList.add("Producto");
+
+  cardProducto.innerHTML = `
+   <h3>${Producto.nombre}</h3>
+   <p>$${Producto.precio}</p>
+   
+   <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
+   <button> Agregar al carrito</button>
+   `;
+
+  if (Producto.stock < 10) {
+    cardProducto.classList.add("pocasUnidades");
+    let PocasUnidades = document.createElement(`p`);
+    PocasUnidades.innerText = "Contamos con pocas unidades";
+    cardProducto.appendChild(PocasUnidades);
+
+    PocasUnidades = "Quedan pocas unidades";
+  }
+
+  ContenedorProductos.append(cardProducto);
 });
-
-alert(salida);
