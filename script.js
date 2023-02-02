@@ -240,12 +240,15 @@ let Productos = [
 
 let ContenedorProductos = document.getElementById("ContenedorProductos"); //Porque es uno solo
 
-// //renderizar productos
-let boton = document.getElementById("boton");
-boton.onclick = AlertBot;
+///renderizar productos
+// let boton = document.getElementById("botonn");
+// botonn.onclick = AlertBot;
 function AlertBot() {
-  alert("Realizo un click");
+   alert("Realizo un click");
 }
+// function AlertBott() {
+//   alert("Realizo un click");
+// }
 
 Productos.forEach((Producto) => {
   let cardProducto = document.createElement("div");
@@ -256,8 +259,7 @@ Productos.forEach((Producto) => {
   cardProducto.innerHTML = `
     <h3>${Producto.nombre}</h3>
     <p>$${Producto.precio}</p>
-   
-    <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
+   <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
     <button id=${Producto.id}> Agregar al carrito</button>
     `;
 
@@ -267,12 +269,15 @@ Productos.forEach((Producto) => {
     PocasUnidades.innerText = "Contamos con pocas unidades";
     cardProducto.appendChild(PocasUnidades);
 
-    //     // PocasUnidades = "Quedan pocas unidades";
+    // PocasUnidades = "Quedan pocas unidades";
   }
 
   ContenedorProductos.append(cardProducto);
 
-  let boton = document.getElementById("Producto.id"); //no entiendoen que estoy fallando
+  let boton = document.getElementById(Producto.id)
+  boton.onclick = AlertBot
 
-  boton.onclick = AlertBot;
+  //let botonn = document.getElementById("botonn");
+   //botonn.onclick = AlertBott;
+
 });
