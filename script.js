@@ -208,6 +208,9 @@
 
 //Tercer entrega
 
+// let Boton = document.getElementById("boton");
+// Boton.addEventListener("click", () => alert("Realizo un click"));
+
 let Productos = [
   {
     id: 1,
@@ -237,19 +240,26 @@ let Productos = [
 
 let ContenedorProductos = document.getElementById("ContenedorProductos"); //Porque es uno solo
 
-//renderizar productos
+// //renderizar productos
+let boton = document.getElementById("boton");
+boton.onclick = AlertBot;
+function AlertBot() {
+  alert("Realizo un click");
+}
+
 Productos.forEach((Producto) => {
   let cardProducto = document.createElement("div");
 
   cardProducto.classList.add("Producto");
+  cardProducto.id = `card${Producto.id}`;
 
   cardProducto.innerHTML = `
-   <h3>${Producto.nombre}</h3>
-   <p>$${Producto.precio}</p>
+    <h3>${Producto.nombre}</h3>
+    <p>$${Producto.precio}</p>
    
-   <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
-   <button> Agregar al carrito</button>
-   `;
+    <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
+    <button id=${Producto.id}> Agregar al carrito</button>
+    `;
 
   if (Producto.stock < 10) {
     cardProducto.classList.add("pocasUnidades");
@@ -257,8 +267,12 @@ Productos.forEach((Producto) => {
     PocasUnidades.innerText = "Contamos con pocas unidades";
     cardProducto.appendChild(PocasUnidades);
 
-    PocasUnidades = "Quedan pocas unidades";
+    //     // PocasUnidades = "Quedan pocas unidades";
   }
 
   ContenedorProductos.append(cardProducto);
+
+  let boton = document.getElementById("Producto.id"); //no entiendoen que estoy fallando
+
+  boton.onclick = AlertBot;
 });
