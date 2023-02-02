@@ -240,7 +240,20 @@ let Productos = [
 
 let ContenedorProductos = document.getElementById("ContenedorProductos"); //Porque es uno solo
 
+let buscador= document.getElementById("buscador")
+//buscador.onchange = () => console.log("EVENTO CHANGE")
+//buscador.oninput = () => console.log("EVENTO INPUT")
+//buscador.onclick = () => console.log("CLICK")
+buscador.oninput = filtrar
+ function filtrar () {
+  let productosFiltrados = Productos.filter(Producto => Producto.nombre.includes(buscador.value))
+  renderizarProductos(productosFiltrados)
+  console.log(productosFiltrados)
+}
 ///renderizar productos
+renderizarProductos(Productos)
+function renderizarProductos (arrayDeProductos){
+  ContenedorProductos.innerHTML = ""
 // let boton = document.getElementById("botonn");
 // botonn.onclick = AlertBot;
 function AlertBot() {
@@ -250,7 +263,7 @@ function AlertBot() {
 //   alert("Realizo un click");
 // }
 
-Productos.forEach((Producto) => {
+arrayDeProductos.forEach((Producto) => {
   let cardProducto = document.createElement("div");
 
   cardProducto.classList.add("Producto");
@@ -280,4 +293,5 @@ Productos.forEach((Producto) => {
   //let botonn = document.getElementById("botonn");
    //botonn.onclick = AlertBott;
 
-});
+})
+}
