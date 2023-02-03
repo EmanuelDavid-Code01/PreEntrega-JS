@@ -225,8 +225,8 @@ let Productos = [
     nombre: "Campera",
     categoria: "Ropa de invierno",
     precio: 1800,
-    stock: 12,
-    imgUrl: "./Imagenes/ShortDeportivo.png",
+    stock: 10,
+    imgUrl: "./Imagenes/Campera.png",
   },
   {
     id: 3,
@@ -234,7 +234,15 @@ let Productos = [
     categoria: "Ropa de verano",
     precio: 2000,
     stock: 9,
-    imgUrl: "./Imagenes/ShortDeportivo.png",
+    imgUrl: "./Imagenes/Musculosa.jpg",
+  },
+  {
+    id: 4,
+    nombre: "Remera",
+    categoria: "Ropa de Invierno",
+    precio: 2500,
+    stock: 15,
+    imgUrl: "./Imagenes/Remera.png",
   },
 ];
 
@@ -272,14 +280,15 @@ arrayDeProductos.forEach((Producto) => {
   cardProducto.innerHTML = `
     <h3>${Producto.nombre}</h3>
     <p>$${Producto.precio}</p>
-   <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
     <button id=${Producto.id}> Agregar al carrito</button>
+   <img src=${Producto.imgUrl} ./Imagenes/ShortDeportivo.png>
+    
     `;
 
   if (Producto.stock < 10) {
     cardProducto.classList.add("pocasUnidades");
-    let PocasUnidades = document.createElement(`p`);
-    PocasUnidades.innerText = "Contamos con pocas unidades";
+    let PocasUnidades = document.createElement(`h6`);
+    PocasUnidades.innerText = "Pocas unidades";
     cardProducto.appendChild(PocasUnidades);
 
     // PocasUnidades = "Quedan pocas unidades";
