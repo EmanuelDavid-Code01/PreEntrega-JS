@@ -246,15 +246,19 @@ let Productos = [
   },
 ];
 
-let ContenedorProductos = document.getElementById("ContenedorProductos"); //Porque es uno solo
+let ContenedorProductos = document.getElementById("ContenedorProductos"); // Uno solo
 
 let buscador= document.getElementById("buscador")
+let buscar = document.getElementById("buscar")
 //buscador.onchange = () => console.log("EVENTO CHANGE")
 //buscador.oninput = () => console.log("EVENTO INPUT")
 //buscador.onclick = () => console.log("CLICK")
-buscador.oninput = filtrar
+buscar.onclick = filtrar
+//buscador.oninput = filtrar
  function filtrar () {
-  let productosFiltrados = Productos.filter(Producto => Producto.nombre.includes(buscador.value))
+  let productosFiltrados = Productos.filter(Producto => Producto.nombre.toLowerCase().includes(buscador.value.toLowerCase())||
+                                                        Producto.categoria.toLowerCase().includes(buscador.value.toLowerCase()))
+
   renderizarProductos(productosFiltrados)
   console.log(productosFiltrados)
 }
