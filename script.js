@@ -81,7 +81,6 @@ function renderizarProductos(arrayDeProductos) {
   });
 }
 function agregarAlCarrito(e) {
-  //1hora26min
   let id = e.target.id
   let productoBuscado = productos.find(producto => producto.id == id)
   let productosEnCarrito = carrito.find(productos => productos.id == productoBuscado.id)
