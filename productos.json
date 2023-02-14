@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "nombre": "Short Deportivo",
+      "categoria": "Deportiva",
+      "precio": 1500,
+      "stock": 20,
+      "imgUrl": "./Imagenes/ShortDeportivo.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Campera",
+      "categoria": "Ropa de invierno",
+      "precio": 1800,
+      "stock": 10,
+      "imgUrl": "./Imagenes/Campera.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Musculosa",
+      "categoria": "Ropa de verano",
+      "precio": 2000,
+     "stock": 9,
+      "imgUrl": "./Imagenes/Musculosa.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Remera",
+      "categoria": "Ropa de Invierno",
+      "precio": 2500,
+     " stock": 15,
+      "imgUrl": "./Imagenes/Remera.png"
+    }
+  ]
