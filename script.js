@@ -1,7 +1,7 @@
 fetch("./productos.json")
-  .then(respu => respu.json())
-  .then(productos => miPrograma(productos))
-  .catch(error => console.log(error))
+  .then((respu) => respu.json())
+  .then((productos) => miPrograma(productos))
+  .catch((error) => console.log(error));
 
 // if (localStorage.getItem("carrito")) {
 //   let carritoEnJSON = localStorage.getItem("carrito");
@@ -156,6 +156,6 @@ function miPrograma(productos) {
   }
 }
 fetch(`https://jsonplaceholder.typicode.com/todos`)
-  .then(resp => resp.json())
-  .then(lista => console.log(lista))
-  .catch(error => console.log(error));
+  .then((resp) => resp.json())
+  .then((lista) => console.log(lista))
+  .catch((error) => console.log(error));
